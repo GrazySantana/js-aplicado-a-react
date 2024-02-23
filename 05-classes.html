@@ -11,10 +11,27 @@
   <script>
 
 
+    class pessoa {
+      // propriedades
+      nome = 'sem nome';
+      genero = 'não informado';
+      idade;
+  
 
-    //1ª Digitação (aqui) 
+    // Metodos
+    mostraGenero() {
+      exibirNaTela(this.genero);
+    }
 
+    mostraNome() {
+      exibirNaTela(this.nome);
+    }
 
+    verificaIdade() {
+      return this.idade >=18 ? 'é maior' : 'é menor';
+    }
+  
+  }
 
     // Traz tudo da classe mãe (Pessoa) + as particularidades da classe (Aluno)
     class Aluno extends Pessoa {
@@ -37,10 +54,12 @@
 
 
 
-    //2ª Digitação (aqui) 
+    let umaPessoa = new Pessoa;
+    umaPessoa.nome = 'Checo Perez';
+    umaPessoa.genero = 'Masculino';
+    umaPessoa.idade = 30;
 
-
-
+exibirNaTela(umaPessoa);
 
     // Objeto herdando recursos
 
